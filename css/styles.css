@@ -1103,5 +1103,18 @@ body::before {
     background: rgba(0,0,0,0.2);
     border-radius: 4px;
   }
+
+    .features, .testimonials-grid {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch; /* iOS 向けに慣性スクロールを有効化 */
+    }
+    .feature, .testimonial-card {
+      flex: 0 0 80%;             /* 1枚あたり幅を80%に */
+      scroll-snap-align: start;  /* スナップ位置をカードの先頭に */
+      margin-right: 1rem;        /* カード間の余白 */
+    }
+  
 }
 
