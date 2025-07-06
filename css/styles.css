@@ -307,6 +307,99 @@ body::before {
   }
 }
 
+/* Aboutセクション全体 */
+#about {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+  /* About セクション内テキストを中央揃え */
+  .about-block {
+    text-align: center;
+  }
+  /* リスト項目はブロック化して左揃え、親で中央配置 */
+  .about-block .feature-list {
+    display: inline-block;
+    text-align: left;
+    padding-left: 0;
+    margin: 0 auto;
+  }
+
+
+/* セクションタイトル */
+#about .section-title {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+  text-align: center;
+}
+
+/* ミッション文 */
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: var(--text-color);
+}
+
+/* 各プログラム見出し */
+#about h2.section-title + ul.feature-list,
+#about h2.section-title + p + h2.section-title {
+  margin-top: 2.5rem;
+}
+
+/* 特徴リスト */
+.feature-list {
+  list-style: disc inside;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  padding: 0;
+}
+
+.feature-list li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* 強調部分 */
+.feature-list li strong {
+  color: var(--primary-color);
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+  #about {
+    padding: 40px 1rem;
+  }
+  #about .section-title {
+    font-size: 1.8rem;
+  }
+  .feature-list li {
+    font-size: 0.95rem;
+  }
+}
+.about-block {
+  background: #ea9b9b00;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+}
+.mission-block { border-top: 4px solid var(--primary-color); }
+.program-block { border-top: 4px solid var(--secondary-color); }
+.support-block { border-top: 4px solid #FFD166; }
+.vision-block  { border-top: 4px solid #06D6A0; }
+
+.about-block .section-title {
+  margin-bottom: 16px;
+}
+.about-block p,
+.about-block .feature-list {
+  margin-left: 16px;
+}
+
+
 #about img {
   display: block;
   max-width: 100%;
@@ -463,8 +556,23 @@ body::before {
   }
 }
 /* トレーナーセクションの基本 */
+/* トレーナーカード：非activeは非表示 */
+.trainer-card {
+  display: none;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.trainer-card.active {
+  display: flex;
+}
 
-
+/* 画像エリア */
+.trainer-image img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
 /* スライダー全体のコンテナ */
 .trainer-slider {
   position: relative;
