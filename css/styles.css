@@ -1113,7 +1113,7 @@ body::before {
     .feature, .testimonial-card {
       flex: 0 0 80%;             /* 1枚あたり幅を80%に */
       scroll-snap-align: start;  /* スナップ位置をカードの先頭に */
-      margin-right: 1rem;        /* カード間の余白 */
+      margin-right: 2rem;        /* カード間の余白 */
     }
   
 }
