@@ -440,91 +440,95 @@ body::before {
   }
 }
 
-/* 料金セクション全体 */
+/* 料金セクション */
 .pricing-section {
-  padding: 60px 0;
-  background-color: #fff; /* 背景色はお好みで */
+  background: #fff;
+  padding: 60px 10%;
   text-align: center;
 }
 
-.pricing-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.pricing-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #333;
-}
-
-/* 上段：3つのプランの横並び */
-.top-row {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap; /* 画面が狭い時は折り返し */
-  margin-bottom: 2rem;
-}
-
-/* プラン共通スタイル */
-.plan {
-  background: #DDDD; /* 左右プランのデフォルト背景 */
-  border: 1px solid #eee;
-  border-radius: 8px;
-  width: 300px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.plan:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-/* おすすめプラン（中央） */
-.plan-center {
-  background: #ff3b2b; /* お好みの赤系カラー */
-  color: #fff;
-}
-
-/* おすすめバッジ */
-.badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: #333; 
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-}
-
-/* プラン名、価格、1回あたり */
-.plan h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-.plan-price {
-  font-size: 1.8rem;
+.pricing-section .section-title {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  color: #222;
   font-weight: bold;
-  margin-bottom: 5px;
 }
-.plan-per {
-  font-size: 0.9rem;
+
+/* 縦並びリスト */
+.pricing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* カード間の縦の余白 */
+  align-items: center;
+}
+
+/* 料金カード */
+.pricing-card {
+  width: 100%;
+  max-width: 800px; /* 横幅が広め */
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin: 30px 0; 
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* プランタイトル */
+.plan-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* 金額 */
+.plan-price {
+  font-size: 2.2rem;
+  color: #FF6B6B;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* 月額目安 */
+.plan-sub {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* 特徴リスト */
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.plan-features li {
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.plan-features li:last-child {
+  border-bottom: none;
+}
+
+/* 備考 */
+.pricing-note {
+  margin-top: 20px;
+  font-size: 0.95rem;
   color: #666;
 }
 
-/* 中央プランの文字色を白に統一 */
-.plan-center h3,
-.plan-center .plan-price,
-.plan-center .plan-per {
-  color: #fff;
-}
 
 /* 中段・下段：大きなボックス（縦並び） */
 .wide-box {
