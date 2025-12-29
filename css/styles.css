@@ -479,7 +479,56 @@ body::before {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
+.pricing-header {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  position: relative;
+}
 
+.pricing-header h2 {
+  font-size: 2.4rem;
+  color: #222;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ff3b2b, #ff8a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInDown 0.8s ease-in-out;
+}
+
+.pricing-header .subtext {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 15px;
+  animation: fadeInUp 1s ease;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff3b2b, #ff8a00);
+  margin: 0 auto;
+  border-radius: 2px;
+  animation: expand 1s ease forwards;
+}
+
+/* アニメーション */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes expand {
+  from { width: 0; opacity: 0; }
+  to { width: 80px; opacity: 1; }
+}
 /* プランタイトル */
 .plan-title {
   font-size: 1.6rem;
