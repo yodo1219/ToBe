@@ -693,6 +693,75 @@ body::before {
     margin-bottom: 20px;
   }
 }
+
+/* 入会金無料バナー */
+.join-banner {
+  background: linear-gradient(90deg, #ff3b2b, #ff8a00);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  animation: fadeInDown 0.8s ease;
+}
+
+.join-banner span {
+  background: #fff200;
+  color: #ff3b2b;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.join-banner strong {
+  font-size: 1.5rem;
+  color: #fff200;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+/* 一回あたり料金 */
+.per-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff3b2b;
+  margin-bottom: 8px;
+}
+
+.per-price span {
+  font-size: 2.4rem;
+  color: #ff8a00;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+}
+
+/* ローン不要注釈 */
+.loan-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .join-banner {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .per-price {
+    font-size: 1.4rem;
+  }
+
+  .per-price span {
+    font-size: 2rem;
+  }
+
+  .loan-note {
+    font-size: 0.85rem;
+  }
+}
 /* トレーナーセクションの基本 */
 /* トレーナーカード：非activeは非表示 */
 .trainer-card {
@@ -1255,4 +1324,95 @@ body::before {
     }
   
 }
+/* ───────────────
+📱スマホ用：ヒーローセクションだけ余白ゼロ
+──────────────── */
+@media (max-width: 768px) {
+  .hero {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/main%20contents.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll;
+    background-color: #000; /* 万が一画像読み込み前のバックアップカラー */
+  }
 
+  /* hero内のcontainerによる余白をリセット */
+  .hero .container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: none;
+  }
+
+  /* hero内のテキスト位置調整 */
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  /* 文字を少し小さくして改行バランス調整 */
+  .hero-heading-text {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
+  .hero .highlight {
+    display: block;
+    font-size: 2.2rem;
+    margin-top: 10px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 15px;
+  }
+
+  .cta-button {
+    margin-top: 20px;
+  }
+}/* ───────────────
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: url("../img/main%20contents.png") no-repeat center center;
+  background-size: cover;
+}
+
+/* スマホ専用の最適化 */
+@media (max-width: 768px) {
+  .hero {
+    width: 100%;
+    height: 100dvh; /* 実際の画面サイズにピッタリ */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+}
+}
